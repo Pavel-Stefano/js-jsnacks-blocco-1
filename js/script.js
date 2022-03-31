@@ -10,31 +10,33 @@ const listaInvitati = [
     'federico',
     'emanuele',
 ];
-
+const boxInput = document.getElementById('inputBox')
+let messaggio = document.createElement('div');
 const btn = document.getElementById('invio');
 console.log(btn)
 
-btn.addEventListener('click ', function(){
-    const partecipanti = document.getElementById('invitato').value;
+btn.addEventListener('click', function(){
+    let partecipanti = document.getElementById('invitato');
+    partecipanti = partecipanti.value;
     console.log(partecipanti);
 
     let autorizzato = false;
     let indexTrovato ;
-    let messaggio;
+    
 
     for (let i = 0; i < listaInvitati.length; i++) {
-        if(listaInvitati[i] == partecipanti){
+        if(listaInvitati[i] === partecipanti){
             autorizzato = true;   
         }
         console.log(i)
     }
     if(autorizzato){
-        div.append('benvenuto')
+        messaggio = ('benvenuto');
     }
     else{
-        div.append('accesso negato')
+        messaggio = ('accesso negato');
     }
-    
+    boxInput.append(messaggio);
 });
 
 
