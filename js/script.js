@@ -10,8 +10,7 @@ const listaInvitati = [
     'federico',
     'emanuele',
 ];
-const boxInput = document.getElementById('inputBox')
-let messaggio = document.createElement('div');
+
 const btn = document.getElementById('invio');
 console.log(btn)
 
@@ -31,12 +30,12 @@ btn.addEventListener('click', function(){
         console.log(i)
     }
     if(autorizzato){
-        messaggio = ('benvenuto');
+        alert ('benvenuto');
     }
     else{
-        messaggio = ('accesso negato');
+        alert('accesso negato');
     }
-    boxInput.append(messaggio);
+    
 });
 
 
